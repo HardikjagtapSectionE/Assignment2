@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web programming Quiz</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="form animated flipInX">
+        <h2>Login To Your Student Account</h2>
+        <form class="loginbox" id="loginForm">
+            <input placeholder="Username" type="text" id="username" required></input>
+            <input placeholder="Password" type="password" id="password" required></input>
+            <button type="submit" id="submit">Login</button>
+        </form>
+    </section>
+    <script>
+     document.getElementById("submit").addEventListener("click", function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    var username = document.getElementById("username").value.trim();
+    var password = document.getElementById("password").value.trim();
+
+    // Check if both fields are not empty
+    if (username !== "" && password !== "") {
+        window.location.href = "welcome.html";
+    } else {
+        alert("Please enter both username and password.");
+    }
+});
+    </script>
+</body>
+</html>
